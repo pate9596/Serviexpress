@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+       Serviexpress
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="logo-container">
+    <ion-avatar id="avatar">
+      <img alt="Logo"
+        src="../../assets/images/Logom .png" />
+    </ion-avatar>
+  </div>
+  <form class="form-container">
+    <ion-item class="custom-input">
+      <ion-input id="username" label="Nombre de Usuario" placeholder="c.abarzua" ></ion-input>
+    </ion-item>
+    <ion-item class="custom-input">
+      <ion-input id="password" type="password" label="Contraseña" placeholder="123456" ></ion-input>
+    </ion-item> 
+    <ion-button class="custom-input" expand="full" >Iniciar Sesión</ion-button>
+    <div class="forgot-password">
+      <a href="/forgot-password" class="forgot-password-link">¿Olvidaste tu contraseña?</a>
+    </div>
+    
+  </form>
+</ion-content>
