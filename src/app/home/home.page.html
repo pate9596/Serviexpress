@@ -1,29 +1,14 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-       Serviexpress
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <div class="logo-container">
-    <ion-avatar id="avatar">
-      <img alt="Logo"
-        src="../../assets/images/Logom .png" />
-    </ion-avatar>
-  </div>
-  <form class="form-container">
-    <ion-item class="custom-input">
-      <ion-input id="username" label="Nombre de Usuario" placeholder="c" ></ion-input>
-    </ion-item>
-    <ion-item class="custom-input">
-      <ion-input id="password" type="password" label="Contraseña" placeholder="123456" ></ion-input>
-    </ion-item> 
-    <ion-button class="custom-input" expand="full" >Iniciar Sesión</ion-button>
-    <div class="forgot-password">
-      <a href="/forgot-password" class="forgot-password-link">¿Olvidaste tu contraseña?</a>
-    </div>
-    
-  </form>
+<ion-content>
+  <img id="logo" src="../../assets/images/Logom .png" alt="logo">
+  <h1>ServiExpress</h1>
+  <ion-item class="background">
+    <ion-input label="Correo" label-placement="floating"></ion-input>
+  </ion-item>
+  <ion-item class="background">
+    <ion-input label="Contraseña" type="password" label-Placement="floating" ></ion-input>
+  </ion-item>
+  <ion-button class="regist">Registrarse</ion-button>
+  <br>
+  <ion-button class="conf" shape="round" > Confimar</ion-button>
 </ion-content>
+
