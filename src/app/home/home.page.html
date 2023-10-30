@@ -11,26 +11,32 @@
   <br>
   <ion-button (click)="informacionUsuario()" class="conf" shape="round" > Confimar</ion-button>
   <ion-modal trigger="open-modal">
+   
     <ng-template>
-      <ion-header>
-        <ion-toolbar>
-          <ion-buttons slot="start">
-            <ion-button (click)="Salir()">Salir</ion-button>
-          </ion-buttons>
-          <ion-title>Registrarse</ion-title>
-                    
-        </ion-toolbar>
-      </ion-header>
+    
       <ion-content class="ion-padding">
+        <img id="logo" src="../../assets/images/Logom .png" alt="logo">
+        <h1>Registro</h1>
         <ion-item>
-          <ion-input [(ngModel)]="user.usuario" label="Nombre Usuario" labelPlacement="floating"
-            placeholder="Ingrese un Nombre"></ion-input>
+          <ion-input [(ngModel)]="user.usuario" label="Nombre" labelPlacement="floating"
+            placeholder="Nombre"></ion-input>
         </ion-item>
+        <br>
+        <ion-item>
+          <ion-input label="Correo"  labelPlacement="floating"
+            placeholder="Correo"></ion-input>
+        </ion-item>
+        <br>
         <ion-item>
           <ion-input [(ngModel)]="user.password" label="Contraseña" type="password" labelPlacement="floating"
             placeholder="Crea una Contraseña"></ion-input>
         </ion-item>
-        <ion-button class="reg" (click)="confirmarUsuario()" [strong]="true">Confirmar</ion-button>
+        <br>
+        <ion-item>
+          <ion-input label="Telefono"  labelPlacement="floating"
+            placeholder="Telefono"></ion-input>
+        </ion-item>
+        <ion-button class="a" (click)="confirmarUsuario()" [strong]="true">Confirmar</ion-button>
       </ion-content>
     </ng-template>
   </ion-modal>
