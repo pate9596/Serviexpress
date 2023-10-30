@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-
+import { AuthGuard } from './auth.guard';
 const routes: Routes = [
   {
     path: 'home',
@@ -11,6 +11,12 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'historial',
+    canActivate: [AuthGuard],
+    loadChildren: () => import('./historial/historial.module').then( m => m.HistorialPageModule)
+  },
+
 ];
 
 @NgModule({

@@ -2,13 +2,39 @@
   <img id="logo" src="../../assets/images/Logom .png" alt="logo">
   <h1>ServiExpress</h1>
   <ion-item class="background">
-    <ion-input label="Correo" label-placement="floating"></ion-input>
+    <ion-input [(ngModel)]="user.usuario" label="Correo" label-placement="floating"></ion-input>
   </ion-item>
   <ion-item class="background">
-    <ion-input label="Contraseña" type="password" label-Placement="floating" ></ion-input>
+    <ion-input [(ngModel)]="user.password" label="Contraseña" type="password" label-Placement="floating" ></ion-input>
   </ion-item>
-  <ion-button class="regist">Registrarse</ion-button>
+  <ion-button id="open-modal" class="regist">Registrarse</ion-button>
   <br>
-  <ion-button class="conf" shape="round" > Confimar</ion-button>
+  <ion-button (click)="informacionUsuario()" class="conf" shape="round" > Confimar</ion-button>
+  <ion-modal trigger="open-modal">
+    <ng-template>
+      <ion-header>
+        <ion-toolbar>
+          <ion-buttons slot="start">
+            <ion-button (click)="Salir()">Salir</ion-button>
+          </ion-buttons>
+          <ion-title>Registrarse</ion-title>
+                    
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="ion-padding">
+        <ion-item>
+          <ion-input [(ngModel)]="user.usuario" label="Nombre Usuario" labelPlacement="floating"
+            placeholder="Ingrese un Nombre"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input [(ngModel)]="user.password" label="Contraseña" type="password" labelPlacement="floating"
+            placeholder="Crea una Contraseña"></ion-input>
+        </ion-item>
+        <ion-button class="reg" (click)="confirmarUsuario()" [strong]="true">Confirmar</ion-button>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+  
 </ion-content>
+
 
